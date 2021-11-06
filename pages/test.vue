@@ -68,7 +68,7 @@ export default {
     learnMoreToast () {
         this.$toast({
             title: 'More Info',
-            description: `This is quite the cool simulation we've got going on here.`,
+            description: `This is quite a cool website we've got going on here.`,
             status: 'info',
             duration: 15000,
             variant: 'solid',
@@ -78,7 +78,7 @@ export default {
     configDeletedToast () {
         this.$toast({
             title: 'Configuration Deleted.',
-            description: `This is quite the cool simulation we've got going on here.`,
+            description: `The configuration has been deleted.`,
             status: 'error',
             duration: 12000,
             variant: 'solid',
