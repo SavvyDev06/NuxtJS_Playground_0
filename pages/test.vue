@@ -1,29 +1,46 @@
 <template>
   <div>
-    <c-button variant-color="indigo" @click="learnMoreToast"
-      >Learn More</c-button
-    >
-    <c-button variant-color="green" @click="changesSavedToast"
-      >Save Changes</c-button
-    >
-    <c-button variant-color="orange" @click="timedRevertableWarningToast"
-      >Perform Dangerous Action</c-button
-    >
-    <c-button variant-color="red" @click="configDeletedToast"
-      >Delete Configuration</c-button
-    >
+    <Nav />
+    <Sidebar />
+    <c-flex bg="tan" p="4">
+      <c-box color="white"> Navbar </c-box>
+      <c-box max-w="1500px" mx="auto">Custom</c-box>
+
+      <NuxtLink to="/about">About Page</NuxtLink>
+    </c-flex>
+    <div>
+      <c-button variant-color="indigo" @click="learnMoreToast"
+        >Learn More</c-button
+      >
+      <c-button variant-color="green" @click="changesSavedToast"
+        >Save Changes</c-button
+      >
+      <c-button variant-color="orange" @click="timedRevertableWarningToast"
+        >Perform Dangerous Action</c-button
+      >
+      <c-button variant-color="red" @click="configDeletedToast"
+        >Delete Configuration</c-button
+      >
+    </div>
   </div>
 </template>
 
 <script lang="js">
 import {
-  CButton
+  CButton,
+  CFlex,
+  CBox
 } from '@chakra-ui/vue'
+
+import Nav from '../components/Nav'
 
 export default {
   name: 'App',
   components: {
-    CButton
+    CButton,
+    CFlex,
+    CBox,
+    Nav
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data () {
