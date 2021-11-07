@@ -1,10 +1,18 @@
 <template>
-    <div>
-        <c-button variant-color="indigo" @click="learnMoreToast">Learn More</c-button>
-        <c-button variant-color="green" @click="changesSavedToast">Save Changes</c-button>
-        <c-button variant-color="orange" @click="timedRevertableWarningToast">Perform Dangerous Action</c-button>
-        <c-button variant-color="red" @click="configDeletedToast">Delete Configuration</c-button>
-    </div>
+  <div>
+    <c-button variant-color="indigo" @click="learnMoreToast"
+      >Learn More</c-button
+    >
+    <c-button variant-color="green" @click="changesSavedToast"
+      >Save Changes</c-button
+    >
+    <c-button variant-color="orange" @click="timedRevertableWarningToast"
+      >Perform Dangerous Action</c-button
+    >
+    <c-button variant-color="red" @click="configDeletedToast"
+      >Delete Configuration</c-button
+    >
+  </div>
 </template>
 
 <script lang="js">
@@ -48,10 +56,11 @@ export default {
     changesSavedToast () {
       this.$toast({
         title: 'Changes saved.',
-        description: "We've successfully saved your changes",
+        description: "We've successfully saved your changes.",
         status: 'success',
         duration: 6500,
         variant: 'subtle',
+        position: 'top-right',
         isClosable: true
       })
     },
@@ -82,6 +91,7 @@ export default {
             status: 'error',
             duration: 12000,
             variant: 'solid',
+            position: 'top-right',
             isClosable: true
         })
     }
